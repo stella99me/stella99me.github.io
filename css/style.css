@@ -8,8 +8,18 @@ ul li{
 
 html,body{
 	height: 100%;
+	font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 }
 /*首页*/
+.navbar{
+	padding: 0.8rem 4rem;
+}
+.nav a {
+	-webkit-transition: all 0.5s ease-in-out;
+	   -moz-transition: all 0.5s ease-in-out;
+	     -o-transition: all 0.5s ease-in-out;
+	        transition: all 0.5s ease-in-out;
+}
 .bg{
 	
 	width: 100%;
@@ -17,4 +27,91 @@ html,body{
 	background: url("../images/banner.jpg") no-repeat;
 	background-size: 100% 100%;
 	background-attachment: fixed;
+}
+
+
+
+/*cv*/
+.cvban{
+	background: url("../images/cvban.jpg") no-repeat center top;
+	background-size: 100% 100%;
+	width: 100%;
+	height: 500px;
+}
+.bInfo{
+	position: relative;
+	width: 800px;
+	height: 500px;
+	margin: 80px auto 20px;
+	border:1px solid red;
+	font-size: 16px;
+	line-height: 50px;
+
+}
+.bInfo .bHead{
+	position: absolute;
+	top: -50px;
+	right: -50px;
+	width:230px;
+	height: 230px;
+	text-align: center;
+	border: 1px solid red;
+	padding: 5px;
+	background: #fff;
+}
+.bInfo .bHead img{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -100px;
+	margin-left: -100px;
+}
+.bInfo .bHead,.bInfo .bHead img{
+	border-radius: 100%;
+}	
+
+.bInfo ul {
+	position: absolute;
+
+}
+.bInfo ul.bInfo1{
+	left:80px;
+	top:40px;
+}
+.bInfo ul.bInfo2{
+	right:80px;
+	bottom:20px;
+}
+.bInfo ul li i{
+	display: inline-block;
+	width: 30px;
+	height: 38px;
+	vertical-align: middle;
+	margin-right: 20px;
+	background: url("../images/icon.gif") no-repeat;
+}
+.bInfo ul li i.ico1{
+	background-position: 0 0;
+}
+.bInfo ul li i.ico2{
+	background-position: 0 -50px;
+}
+.bInfo ul li i.ico3{
+	background-position: 0 -99px;
+}
+.bInfo ul li i.ico4{
+	background-position: 0 -144px;
+}
+.bInfo ul li i.ico5{
+	background-position: 0 -191px;
+}
+.bInfo ul li i.ico6{
+	background-position: 0 -234px;
+}
+
+
+/*自我介绍*/
+.intro{
+	width: 100%;
+	background-color: #ffeeee
 }
