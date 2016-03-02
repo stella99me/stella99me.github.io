@@ -1,4 +1,4 @@
-*{
+*,h2{
 	margin:0;
 	padding: 0;
 }
@@ -31,7 +31,6 @@ html,body{
 	background-size: 100% 100%;
 	background-attachment: fixed;
 }
-
 
 
 /*cv*/
@@ -140,7 +139,44 @@ html,body{
 	margin-bottom: 20px;
 	box-shadow: 0px 1px 2px 0px #ddd;
 	background: #fff;
+	overflow: hidden;
+	-webkit-transition: all 0.3s ease-in-out;
+	   -moz-transition: all 0.3s ease-in-out;
+		 -o-transition: all 0.3s ease-in-out;
+			transition: all 0.3s ease-in-out;
 }
+.post:hover{
+	-webkit-box-shadow: 0px 3px 8px 2px #ccc;
+	   -moz-box-shadow: 0px 3px 8px 2px #ccc;
+			box-shadow: 0px 3px 8px 2px #ccc;
+
+}
+.project .morePro{
+	padding: 50px 0 20px;
+}
+.project .moreBtn{
+	display: block;
+	-webkit-animation: btnRotate 2.5s linear  infinite;
+	        animation: btnRotate 2.5s linear infinate;
+	/*transform-origin:0 0;*/
+}
+@keyframes btnRotate{
+	0%{
+		transform:rotate(0deg);
+	}
+	100%{
+		transform:rotate(360deg);
+	}
+}
+.project .moreBtn img{
+	display: inline-block;
+	width: 120px;
+	height: 120px;
+	margin-top: 50px;
+}
+/*.post:hover img{
+	transform: scale(1.2);
+}*/
 .post img{
 	max-width: 100%;
 	height: auto;
