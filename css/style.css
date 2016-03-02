@@ -23,6 +23,45 @@ html,body{
 	     -o-transition: all 0.5s ease-in-out;
 	        transition: all 0.5s ease-in-out;
 }
+.nav .nav-link{
+	position: relative;
+	padding-left: 1rem;
+	padding-right: 1rem;
+}
+.nav .nav-link:before,
+.nav .nav-link:after{
+	content:"";
+	position: absolute;
+	left: 0;
+	width: 0%;
+	height: 2px;
+	background: red;
+    /*width: 100%;*/
+    -webkit-transform: scale3d(0, 1, 1);
+    transform: scale3d(0, 1, 1);
+    -webkit-transition: -webkit-transform 0.2s;
+    transition: transform 0.2s;
+}
+.nav .active .nav-link:before,
+.nav .active .nav-link:after{
+	width: 100%;
+	-webkit-transform: scale3d(1, 1, 1);
+	transform: scale3d(1, 1, 1);
+	-webkit-transition-timing-function: cubic-bezier(0.22, 0.61, 0.36, 1);
+	transition-timing-function: cubic-bezier(0.22, 0.61, 0.36, 1);
+	-webkit-transition-duration: 0.4s;
+	transition-duration: 0.4s;
+}
+.nav .nav-link:before{
+	top: 0;
+	-webkit-transform-origin: 0 50%;
+	        transform-origin: 0 50%;
+}
+.nav .nav-link:after{
+	bottom: 0;
+	-webkit-transform-origin: 100% 50%;
+	transform-origin: 100% 50%;
+}
 .bg{
 	
 	width: 100%;
