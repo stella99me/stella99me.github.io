@@ -5,6 +5,9 @@
 ul li{
 	list-style: none;
 }
+a,a:hover{
+	text-decoration: none;
+}
 
 html,body{
 	height: 100%;
@@ -114,4 +117,49 @@ html,body{
 .intro{
 	width: 100%;
 	background-color: #ffeeee
+}
+
+
+/*作品*/
+.project{
+	background: #eee;
+	padding-top: 80px;
+	padding-bottom: 40px;
+}
+.section-headwrap{
+	margin-bottom: 50px;
+}
+.section-headwrap .section-subhead{
+	font-size: 16px;
+	font-style: italic;
+	font-weight: 400;
+}
+.post{
+	position: relative;
+	padding-bottom: 38px;
+	margin-bottom: 20px;
+	box-shadow: 0px 1px 2px 0px #ddd;
+	background: #fff;
+}
+.post img{
+	max-width: 100%;
+	height: auto;
+}
+.post .post-title{
+	position: absolute;
+	left: 0;
+	bottom: 12px;
+	width: 100%;
+	font-size: 20px;
+	margin:0;
+	text-align: center;
+}
+.post .post-img a{
+	padding: 12px;
+	display: block;
+}
+
+/*我的简历*/
+.cv{
+	padding: 50px 0;
 }
