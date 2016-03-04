@@ -15,7 +15,13 @@ html,body{
 }
 /*首页*/
 .navbar{
-	padding: 0.8rem 4rem;
+	padding: 2rem 4rem;
+	transition: all 0.4s ease-in-out;
+	
+}
+.navBg{
+	background: rgba(255,255,255,0.7);
+	padding: 1rem 4rem;
 }
 .nav a {
 	-webkit-transition: all 0.5s ease-in-out;
@@ -39,8 +45,8 @@ html,body{
     /*width: 100%;*/
     -webkit-transform: scale3d(0, 1, 1);
     transform: scale3d(0, 1, 1);
-    -webkit-transition: -webkit-transform 0.2s;
-    transition: transform 0.2s;
+    -webkit-transition: -webkit-transform 0.4s;
+    transition: transform 0.4s;
 }
 .nav .active .nav-link:before,
 .nav .active .nav-link:after{
@@ -62,95 +68,101 @@ html,body{
 	-webkit-transform-origin: 100% 50%;
 	transform-origin: 100% 50%;
 }
-.bg{
-	
-	width: 100%;
-	height: 100%;
-	background: url("../images/banner.jpg") no-repeat;
-	background-size: 100% 100%;
-	background-attachment: fixed;
-}
-
-
-/*cv*/
-.cvban{
-	background: url("../images/cvban.jpg") no-repeat center top;
-	background-size: 100% 100%;
-	width: 100%;
-	height: 500px;
-}
-.bInfo{
-	position: relative;
-	width: 800px;
-	height: 500px;
-	margin: 80px auto 20px;
-	border:1px solid red;
-	font-size: 16px;
-	line-height: 50px;
-
-}
-.bInfo .bHead{
-	position: absolute;
-	top: -50px;
-	right: -50px;
-	width:230px;
-	height: 230px;
-	text-align: center;
-	border: 1px solid red;
-	padding: 5px;
+/*music*/
+.music{
+	position: fixed;
+	top: 100px;
+	right: 20px;
+	border:4px solid red;
+	border-radius: 100%;
+	padding: 4px;
 	background: #fff;
 }
-.bInfo .bHead img{
+.music .music_disc{
+	width: 40px;
+	height: 40px;
+	opacity: 0.7;
+	cursor: pointer;
+}
+.play{
+	-webkit-animation: music_disc 1s linear infinite;	
+	   -moz-animation: music_disc 1s linear infinite;	
+	     -o-animation: music_disc 1s linear infinite;	
+			animation: music_disc 1s linear infinite;	
+}
+@keyframes music_disc{
+	0%{
+		transform:rotate(0deg);
+	}
+	100%{
+		transform:rotate(360deg);
+	}
+}
+.music .music_pointer{
 	position: absolute;
-	top: 50%;
-	left: 50%;
+	width: 28%;
+	top:9px;
+	right: 3px;
+}
+
+.bg{
+	width: 100%;
+	height: 100%;
+	background: url("../images/banner1.jpg") no-repeat  center top;
+	/*background: url("../images/sBan.jpg") no-repeat #e0ebe8 center top;*/
+	background-attachment: fixed;
+	background-size: 100% 100%;
+}
+
+
+/*简历 resume*/
+.resume .resumeBan img{
+	/*background: url("../images/resumeBan.jpg") no-repeat center center;*/
+	max-width: 100%;
+	height: auto;
+}
+.resume .re-wrap{
+	position: relative;
+	font-size: 0.9rem;
 	margin-top: -100px;
-	margin-left: -100px;
 }
-.bInfo .bHead,.bInfo .bHead img{
-	border-radius: 100%;
-}	
-
-.bInfo ul {
+.resume .re-wrap h3{
+	font-size: 1.5rem;
+}
+.resume .re-wrap:before{
+	content: '';
 	position: absolute;
-
+	left: 50%;
+	top:0;
+	width: 2px;
+	height: 1500px;
+	border-left: 1px solid #ddd
 }
-.bInfo ul.bInfo1{
-	left:80px;
-	top:40px;
+.resume .re-wrap .re-head{
+	margin-bottom: 80px;
 }
-.bInfo ul.bInfo2{
-	right:80px;
-	bottom:20px;
+.resume .re-wrap .re-head img{
+	border-radius: 100%;
+	border: 12px solid #eee;
 }
-.bInfo ul li i{
+.resume p{
+	font-family: "microsoft yahei";
+	line-height: 24px;
+	margin:0;
+	line-height: 34px;
+}
+/*circle*/
+.resume .re-wrap  .re-circle i{
+	position: absolute;
+	left: 50%;
+	margin-left: -10px;
 	display: inline-block;
-	width: 30px;
-	height: 38px;
-	vertical-align: middle;
-	margin-right: 20px;
-	background: url("../images/icon.gif") no-repeat;
+	width: 20px;
+	height: 20px;
 }
-.bInfo ul li i.ico1{
-	background-position: 0 0;
+.resume .re-wrap  .re-circle i.re-circle1{
+	top:305px;
 }
-.bInfo ul li i.ico2{
-	background-position: 0 -50px;
-}
-.bInfo ul li i.ico3{
-	background-position: 0 -99px;
-}
-.bInfo ul li i.ico4{
-	background-position: 0 -144px;
-}
-.bInfo ul li i.ico5{
-	background-position: 0 -191px;
-}
-.bInfo ul li i.ico6{
-	background-position: 0 -234px;
-}
-
-
 /*自我介绍*/
 .intro{
 	width: 100%;
@@ -195,8 +207,8 @@ html,body{
 }
 .project .moreBtn{
 	display: block;
-	-webkit-animation: btnRotate 2.5s linear  infinite;
-	        animation: btnRotate 2.5s linear infinate;
+	/*-webkit-animation: btnRotate 2.5s linear  infinite;
+	        animation: btnRotate 2.5s linear infinate;*/
 	/*transform-origin:0 0;*/
 }
 @keyframes btnRotate{
@@ -211,16 +223,20 @@ html,body{
 	display: inline-block;
 	width: 120px;
 	height: 120px;
-	margin-top: 50px;
+	margin-top: 30px;
+	-webkit-animation: btnRotate 2.5s linear  infinite;
+	        animation: btnRotate 2.5s linear infinate;
+	/*transform-origin:0 0;*/
 }
-/*.post:hover img{
-	transform: scale(1.2);
-}*/
+.post{
+	padding: 12px;
+}
 .post img{
 	max-width: 100%;
 	height: auto;
+	transition:all 0.5s ease-in-out;
 }
-.post .post-title{
+/*.post .post-title{
 	position: absolute;
 	left: 0;
 	bottom: 12px;
@@ -228,12 +244,16 @@ html,body{
 	font-size: 20px;
 	margin:0;
 	text-align: center;
-}
+}*/
 .post .post-img a{
-	padding: 12px;
+	/*padding: 12px;*/
 	display: block;
+	overflow: hidden;
 }
 
+.post .post-img a:hover img{
+	transform:scale(1.1);
+}
 /*我的简历*/
 .cv{
 	padding: 50px 0;

@@ -3,10 +3,10 @@
 <head>
 	<meta charset="UTF-8">
 	<title>stella</title>
-	
+	<meta name="viewport" content="width=device-width,initial-scale=1.0"  />
 	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/grumble.min.css">
 	<link rel="stylesheet" href="css/style.css">
-	<!-- <link rel="stylesheet" href="css/carousel.css"> -->
 </head>
 <body>
 	<!-- nav -->
@@ -23,10 +23,14 @@
 	    <nav class="nav navbar-nav">
 	      <li class="nav-item active"><a class=" nav-link  page-scroll" href="#home" >Home</a></li>
 	      <li class="nav-item"><a class=" nav-link page-scroll" href="#project" >我的作品</a></li>
-	      <li class="nav-item"><a class=" nav-link page-scroll" href="#cv" >我的简历</a></li>
+	      <li class="nav-item"><a class=" nav-link page-scroll" href="#resume" >我的简历</a></li>
 	    </nav>
 	  </div>
 	</header>
+	<div class="music">
+		<img src="images/music_disc.png" alt="" class="music_disc play" id="music">
+		<img src="images/music_pointer.png" alt="" class="music_pointer">
+	</div>
 	<!-- section1 -->
 		<section id="home" class="bg">
 		</section>
@@ -35,14 +39,26 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-12 text-center section-headwrap">
-					<h2 class="section-head">项目展示</h2>
+					<!-- <h2 class="section-head">项目展示</h2> -->
 					<h3 class="section-subhead">这个世界并不在乎你的自尊，只在乎你做出来的成绩，然后再去强调你的感受。- 比尔·盖茨</h3>
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-xs-12 col-md-6">
 					<article class="post">
-						<h2 class="post-title"><a href="">法律互助联盟</a></h2>
+						<!-- <h2 class="post-title"><a href="">法律互助联盟</a></h2> -->
+						<div class="post-img">
+							<a href="">
+								<span>
+									<img src="images/banner.jpg" alt="">
+								</span>
+							</a>
+						</div>
+					</article>
+				</div>
+				<div class="col-xs-12 col-md-6">
+					<article class="post">
+						<!-- <h2 class="post-title"><a href="">法律互助联盟</a></h2> -->
 						<div class="post-img">
 							<a href=""><img src="images/banner.jpg" alt=""></a>
 						</div>
@@ -50,7 +66,7 @@
 				</div>
 				<div class="col-xs-12 col-md-6">
 					<article class="post">
-						<h2 class="post-title"><a href="">法律互助联盟</a></h2>
+						<!-- <h2 class="post-title"><a href="">法律互助联盟</a></h2> -->
 						<div class="post-img">
 							<a href=""><img src="images/banner.jpg" alt=""></a>
 						</div>
@@ -58,15 +74,7 @@
 				</div>
 				<div class="col-xs-12 col-md-6">
 					<article class="post">
-						<h2 class="post-title"><a href="">法律互助联盟</a></h2>
-						<div class="post-img">
-							<a href=""><img src="images/banner.jpg" alt=""></a>
-						</div>
-					</article>
-				</div>
-				<div class="col-xs-12 col-md-6">
-					<article class="post">
-						<h2 class="post-title"><a href="">法律互助联盟</a></h2>
+						<!-- <h2 class="post-title"><a href="">法律互助联盟</a></h2> -->
 						<div class="post-img">
 							<a href=""><img src="images/banner.jpg" alt=""></a>
 						</div>
@@ -82,40 +90,74 @@
 		</div>
 	</section>
 
-	<!-- 自我介绍 -->
-	<!-- <section class="intro">
-		<b>我就是我</b>
-		<i>颜色不一样的烟火</i>
-		<p>Hi！大家好！我是李星星</p>
-	</section> -->
-	<section id="cv" class="cv">
+	<section id="resume" class="resume">
+		<div class="resumeBan">
+			<img src="images/resumeBan.jpg" alt="">
+		</div>
 		<div class="container">
-			<h2 class="text-center">我的简历</h2>
-			<div class="bInfo">
-				<div class="bHead">
-					<img src="images/head.jpg" alt="">
+			<div class="row re-wrap">
+				<div class="re-circle">
+					<i class="re-circle1"></i>
+					<i class="re-circle2"></i>
+					<i class="re-circle3"></i>
+					<i class="re-circle4"></i>
+					<i class="re-circle5"></i>
 				</div>
-				<ul class="bInfo1">
-					<li><i class="ico1"></i>李星星</li>
-					<li><i class="ico2"></i>现居北京</li>
-					<li><i class="ico3"></i>web前端工程师</li>	
-				</ul>
-				<ul class="bInfo2">
-					<li><i class="ico4"></i>1880127212</li>
-					<li><i class="ico5"></i>1781976921</li>
-					<li><i class="ico6"></i>18801227212@163.com</li>
-				</ul>
+				<div class="col-lg-12 text-center re-head">
+					<img src="images/head.jpg" alt="">	
+				</div>
+				<div class="col-lg-3  col-lg-offset-7 col-md-6 col-md-offset-7 col-xs-5 col-xs-offset-7 text-left">
+					<h3 class="re-title">基本信息</h3>
+					<p>姓名：李星星</p>
+					<p>年龄：24</p>
+					<p>手机：18801227212</p>
+					<p>QQ：2652179767</p>
+				</div>
+				<div class="col-lg-3 col-lg-offset-2 col-md-5 col-md-offset-0 col-xs-5  text-right">
+					<h3 class="re-title">东方融智</h3>
+					<p>2015/06 -- 2015/11</p>
+					<p>工作职责</p>
+					<p>&bull;&nbsp;使用HTML，CSS, JavaScript实现Web页面布局及动态交互效果</p>
+					<p>&bull;&nbsp;解决浏览器兼容问题</p>
+					<p>&bull;&nbsp;使用ajax实现数据交互</p>
+				</div>
+				<div class="col-lg-3 col-lg-offset-7 col-md-6 col-md-offset-7 col-xs-3 col-xs-offset-7  text-left">
+					<h3 class="re-title">中易物联</h3>
+					<p>2013/04 -- 2015/06</p>
+					<p>工作职责</p>
+					<p>&bull;&nbsp;参与网站需求讨论，根据界面设计稿快速完成静态页面html的制作。</p>
+					<p>&bull;&nbsp;解决浏览器兼容问题</p>
+					<p>&bull;&nbsp;适用ajax实现数据交互</p>
+					<p>&bull;&nbsp;了解后台程序（.net）开发</p>
+				</div>
+				<div class="col-lg-3  col-lg-offset-2  col-md-5 col-md-offset-0 col-xs-5  text-right">
+					<h3 class="re-title">教育背景</h3>
+					<p>毕业院校：中国地质大学</p>
+					<p>专业：计算机科学与技术</p>
+					<p>学历：大专</p>
+				</div>
+				<div class="col-lg-3 col-lg-offset-7 col-md-6 col-md-offset-7 col-xs-5 col-xs-offset-7">
+					<h3>专业技能</h3>
+					<p>&bull;&nbsp;精通HTML+CSS网页布局与样式，熟悉HTML5和CSS3。</p>
+					<p>&bull;&nbsp;精通HTML+CSS网页布局与样式，熟悉HTML5和CSS3。</p>
+				</div>
 			</div>
-						
 		</div>
 	</section>
 	
+
+	<audio src="audio/luck.mp3" autoplay="true" id="audio"></audio>
 
 
 	<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/jquery.easing.min.js"></script>
 	<script src="js/main.js"></script>
+	<script src="js/jquery.grumble.min.js"></script>
+	<script>
+		
+		
 
+	</script>
 </body>
 </html>
